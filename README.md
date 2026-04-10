@@ -1,6 +1,8 @@
 # 🌐 virtual-homelab
 
-Infraestructura de red y seguridad virtualizada. Este proyecto es un entorno evolutivo diseñado para simular redes corporativas, probar configuraciones de sistemas, redes y nuevas tecnologias, e incluso crear futuros laboratorios de prueba para pentesting/auditorias de seguridad.
+**Infraestructura de red y seguridad virtualizada.**
+***
+Este proyecto es un entorno evolutivo diseñado para simular redes corporativas, probar configuraciones de sistemas, redes y nuevas tecnologias, e incluso crear futuros laboratorios de prueba para pentesting/auditorias de seguridad.
 
 ![Status: En Desarrollo](https://img.shields.io/badge/Estado%20actual-Fase%200:%20Core%20Infra-blue)
 
