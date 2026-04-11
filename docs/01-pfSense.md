@@ -5,15 +5,11 @@
 1. [Fase 0: Infraestructura Core (Red Virtual y Firewall)](#1-fase-0-infraestructura-core-red-virtual-y-firewall)
     - [Introducción](#introducción)
     - [Especificaciones de Hardware (VMware)](#especificaciones-de-hardware-vmware)
-    - [Arquitectura de Red](#arquitectura-de-red)
-      - [Adaptador 1: WAN (Lado Público)](#adaptador-1-wan-lado-público)
-      - [Adaptador 2: LAN (Lado Privado)](#adaptador-2-lan-lado-privado)
+    - [Configuración de Red y Conectividad](#configuración-de-red-y-conectividad)
     - [Servicios Configurados](#servicios-configurados)
     - [Decisiones de Diseño y Notas Técnicas](#decisiones-de-diseño-y-notas-técnicas)
     - [Verificaciones](#verificaciones)
-      - [A. Asignación de Interfaces e IP](#a-asignación-de-interfaces-e-ip)
-      - [B. Conectividad Exterior (WAN)](#b-conectividad-exterior-wan)
-      - [C. Aislamiento y Segmentación (VMware)](#c-aislamiento-y-segmentación-vmware)
+  
 
 ***
 
@@ -37,7 +33,7 @@ Para garantizar un rendimiento óptimo, se han asignado los siguientes recursos 
 
 ---
 
-### Arquitectura de Red
+### Configuración de Red y Conectividad
 El firewall se ha configurado con una topología de "doble pata" para aislar el tráfico:
 
 #### Adaptador 1: WAN (Lado Público)
@@ -75,16 +71,25 @@ Durante el asistente de instalación, se han levantado los siguientes servicios 
 #### A. Asignación de Interfaces e IP
 - [x] **Estado:** Las interfaces se han mapeado correctamente (em0 para WAN y em1 para LAN).
 > **Evidencia:**
-> ![Captura de la consola de pfSense mostrando las IPs asignadas](ruta-a-tu-captura-consola.png)
+> ![Captura de la consola de pfSense mostrando las IPs asignadas](assets/img/pfsense/pfsense-ip-interfaces.png)
 
-#### B. Conectividad Exterior (WAN)
+#### B. Asignación de IPs dinámicas a clientes (DHCP)
+- [x] **Estado:** El servidor DHCP asigna las IPs de manera correcta (`10.0.1.100` - `10.0.1.200`).
+> **Evidencia:**
+> ![Captura de la interfaz del cliente correctamente configurada](assets/img/pfsense/pfsense-dhcp.png)
+
+#### C. Conectividad Exterior (WAN) desde cliente
 - [x] **Estado:** El firewall resuelve DNS y tiene salida a internet.
 > **Evidencia:**
-> ![Captura de un ping exitoso a 8.8.8.8 desde la shell de pfSense](ruta-a-tu-captura-ping.png)
+> ![Captura de un ping exitoso a 'google.com' desde la shell del cliente](assets/img/pfsense/pfsense-ping.png)
 
-#### C. Aislamiento y Segmentación (VMware)
+#### D. Aislamiento y Segmentación (VMware)
 - [x] **Estado:** El adaptador LAN está vinculado exclusivamente al segmento `homelab`.
 > **Evidencia:**
-> ![Captura de los ajustes de red de VMware Workstation](ruta-a-tu-captura-ajustes-vmware.png)
+> ![Captura de los ajustes de red de VMware Workstation](assets/img/pfsense/pfsense-adaptador-2.png)
+
+- [x] **Estado:** El adaptador WAN está configurado en modo 'bridge'.
+> **Evidencia:**
+> ![Captura de los ajustes de red de VMware Workstation](assets/img/pfsense/pfsense-adaptador-1.png)
 
 ---
