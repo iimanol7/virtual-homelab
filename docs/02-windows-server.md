@@ -49,7 +49,7 @@ Para integrar el servidor en el ecosistema del laboratorio, se han definido los 
 
 ---
 
-### Verificación y Evidencias
+### Verificaciones y Evidencias
 
 #### A. Identidad del Sistema e IP
 - [x] **Estado:** Hostname actualizado a `SRV-AD01` e IP estática asignada satisfactoriamente.
@@ -61,3 +61,44 @@ Para integrar el servidor en el ecosistema del laboratorio, se han definido los 
 > **Evidencia:** 
 > ![Captura de ping a 'google.com' exitoso](assets/img/windows-server/WS-ping.png)
 
+***
+
+## 2. Fase 1: Directorio Activo y Gestión de Identidad
+
+### Introducción
+
+En esta fase se ha realizado la implementación y configuración básica del **Directorio Activo (AD DS)**, así como su respectivo servidor DNS. De esta manera, convertimos el servidor en el punto donde se centraliza la gestión de usuarios, equipos, políticas/directivas y recursos de la red. 
+
+
+***
+
+### Configuración del Dominio
+
+* **Nombre de Dominio (FQDN):** `homelab.local`
+* **Roles Instalados:** 
+    * **AD DS:** Permite la implantación del dominio, y, junto a ello, la gestión centralizada de objetos de la red.
+    * **DNS Server:** Permite que las consultas DNS internas (`.homelab.local` en este caso) se realicen satisfactoriamente. 
+* **Usuarios:** Para la configuración inicial del dominio, se ha creado un usuario genérico llamado `Lab Guest`. 
+
+***
+### Notas adicionales
+
+Debido a que finalmente, al contrario de lo que se explicó en la fase anterior, se ha decidido que la gestión de las consultas DNS se realizarán por parte del router (pfSense) de manera centralizada, se ha tenido que añadir una configuración extra en este equipo, añadiendo un **Domain Override**, el cual al recibir una consulta con el dominio `.homelab.local`, delegara su resolución al servidor DNS de Windows Server. Para más información al respecto, mirar la documentación de pfSense en `/docs/01-pfSense.md` 
+
+***
+
+### Verificación y Evidencias
+- [ ] **Estado:** Promoción a DC completada.
+> Evidencia
+>
+>
+
+- [ ] **Estado:** Resolución DNS correcta (nslookup).
+> Evidencia
+>
+>
+
+- [ ] **Estado:** Usuario de prueba creado y validado.
+> Evidencia
+>
+>

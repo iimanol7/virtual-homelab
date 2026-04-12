@@ -10,7 +10,9 @@ Este proyecto es un entorno evolutivo diseñado para simular redes corporativas,
 
 ## 📍 Estado del Proyecto
 
-Actualmente trabajando en la **Fase 0**. El objetivo es establecer el enrutamiento base y la salida segura a internet para el resto de la red.
+El proyecto se divide en varias fases previamente definidas, donde se distribuyen las tareas de forma estructurada para facilitar su desarrollo, seguimiento y mantenimiento. De esta manera se evita el dispersamiento, puediendo centrarnos en completar cada fase sin abordar múltiples tareas a la vez y sin dejar procesos a medias.
+
+Actualmente trabajando en la **Fase 2**. 
 
 | Fase | Hito | Estado |
 | :--- | :--- | :--- |
@@ -19,7 +21,7 @@ Actualmente trabajando en la **Fase 0**. El objetivo es establecer el enrutamien
 | **Fase 2** | Hardening y Monitorización (SIEM) | ⏳ Pendiente |
 
 > [!INFO]
-> A medida que el proyecto se vaya desarrollando, se irán definiendo nuevas fases.
+> A medida que el proyecto se vaya desarrollando, se irán definiendo nuevas fases, en base a los requerimientos u objetivos en ese momento.
 
 ---
 

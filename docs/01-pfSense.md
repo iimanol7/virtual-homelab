@@ -66,7 +66,7 @@ Durante el asistente de instalación, se han levantado los siguientes servicios 
 
 ---
 
-### Verificaciones
+### Verificaciones y Evidencias
 
 #### A. Asignación de Interfaces e IP
 - [x] **Estado:** Las interfaces se han mapeado correctamente (em0 para WAN y em1 para LAN).
@@ -93,3 +93,28 @@ Durante el asistente de instalación, se han levantado los siguientes servicios 
 > ![Captura de los ajustes de red de VMware Workstation](assets/img/pfsense/pfsense-adaptador-1.png)
 
 ---
+
+## 2. Fase 1: Directorio Activo y Gestión de Identidad	
+
+### Introducción
+
+En esta fase principalmente se ha realizado una instalación y configuración del Directorio Activo, junto a su respectivo servidor DNS. 
+
+No obstante, en pfSense se ha tenido que hacer una pequeña configuración extra (**Domain Override**) para asegurar que las consultas DNS internas (`.homelab.local`) sean redirigidas al servidor DNS de Windows Server para que este las resuelva correctamente.
+
+***
+
+### Configuración del Domain Override
+
+
+***
+### Verificaciones y Evidencias
+- [ ] Domain Override creado correctamente
+> Evidencia
+>
+>
+
+- [ ] Resolucion DNS correcta (internas y externas)
+> Evidencia
+>
+>
