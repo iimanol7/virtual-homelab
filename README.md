@@ -1,6 +1,6 @@
 # 🌐 virtual-homelab
 
-**Infraestructura de red y seguridad virtualizada.**
+### Infraestructura de red y seguridad virtualizada.
 ***
 Este proyecto es un entorno evolutivo diseñado para simular redes corporativas, probar configuraciones de sistemas, redes y nuevas tecnologias, e incluso crear futuros laboratorios de prueba para pentesting/auditorias de seguridad.
 
@@ -14,8 +14,8 @@ Actualmente trabajando en la **Fase 0**. El objetivo es establecer el enrutamien
 
 | Fase | Hito | Estado |
 | :--- | :--- | :--- |
-| **Fase 0** | Core Infra (pfSense + Virtual Networking) | 🏗️ En construcción |
-| **Fase 1** | Directorio Activo y Gestión de Identidad | ⏳ Pendiente |
+| **Fase 0** | Core Infra (pfSense + Virtual Networking) | 🟢 **Completado** |
+| **Fase 1** | Directorio Activo y Gestión de Identidad | 🟢 **Completado** |
 | **Fase 2** | Hardening y Monitorización (SIEM) | ⏳ Pendiente |
 
 > [!INFO]
