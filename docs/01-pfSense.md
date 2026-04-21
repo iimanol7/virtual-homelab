@@ -106,15 +106,19 @@ No obstante, en pfSense se ha tenido que hacer una pequeña configuración extra
 
 ### Configuración del Domain Override
 
+Para asegurar que las consultas DNS del dominio local (`.homelab.local`) se resuelven correctamente, se crea un **Domain Override**, el cual redirige todas las consultas que contengan dicho dominio al servidor DNS del Directorio Activo configurado previamente:
+
+- **Domain:** homelab.local
+- **Lookup Server IP Address:** 10.0.1.2
 
 ***
 ### Verificaciones y Evidencias
-- [ ] Domain Override creado correctamente
+- [x] Domain Override creado correctamente
 > Evidencia
 >
->
+> ![Domain Override creado correctamente](/docs/assets/img/pfsense/domain_override.png)
 
-- [ ] Resolucion DNS correcta (internas y externas)
+- [x] Resolucion DNS correcta (internas y externas)
 > Evidencia
 >
->
+> ![Resoluciones DNS correctas](/docs/assets/img/windows-server/nslookup.png)

@@ -88,17 +88,17 @@ Debido a que finalmente, al contrario de lo que se explicó en la fase anterior,
 ***
 
 ### Verificación y Evidencias
-- [ ] **Estado:** Promoción a DC completada.
+- [x] **Estado:** Promoción a DC completada.
 > Evidencia
 >
->
+> ![Promoción correcta a DC 'homelab.local'](/docs/assets/img/windows-server/domain.png)
 
-- [ ] **Estado:** Resolución DNS correcta (nslookup).
+- [x] **Estado:** Resolución DNS correcta (desde cliente).
 > Evidencia
 >
->
+> ![Resoluciones DNS correctas](/docs/assets/img/windows-server/nslookup.png)
 
-- [ ] **Estado:** Usuario de prueba creado y validado.
+- [x] **Estado:** Usuario de prueba creado y validado.
 > Evidencia
 >
->
+> ![Usuario del dominio inicado sesión en cliente](/docs/assets/img/windows-server/whoami.png)

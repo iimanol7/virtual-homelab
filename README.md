@@ -20,7 +20,7 @@ Actualmente trabajando en la **Fase 2**.
 | **Fase 1** | Directorio Activo y Gestión de Identidad | 🟢 **Completado** |
 | **Fase 2** | Hardening y Monitorización (SIEM) | ⏳ Pendiente |
 
-> [!INFO]
+> [!NOTE]
 > A medida que el proyecto se vaya desarrollando, se irán definiendo nuevas fases, en base a los requerimientos u objetivos en ese momento.
 
 ---
